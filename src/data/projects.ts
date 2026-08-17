@@ -10,7 +10,7 @@ export interface ProjectItem {
   iconGradient: string
   iconColor: string
   previewUrl: string
-  githubUrl: string
+  githubUrl?: string
   date: string
 }
 
@@ -27,8 +27,7 @@ export const projects: ProjectItem[] = [
     gradient: 'linear-gradient(90deg, #a855f7, #36ada3)',
     iconGradient: 'linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(54, 173, 163, 0.25))',
     iconColor: '#a855f7',
-    previewUrl: '#',
-    githubUrl: '#',
+    previewUrl: '/portfolio/spiritual-care',
     date: '2024-09-01',
   },
   {
@@ -43,8 +42,7 @@ export const projects: ProjectItem[] = [
     gradient: 'linear-gradient(90deg, #f59e0b, #36ada3)',
     iconGradient: 'linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(54, 173, 163, 0.25))',
     iconColor: '#f59e0b',
-    previewUrl: '#',
-    githubUrl: '#',
+    previewUrl: '/portfolio/poling',
     date: '2024-02-01',
   },
   {
@@ -59,8 +57,7 @@ export const projects: ProjectItem[] = [
     gradient: 'linear-gradient(90deg, #36ada3, #2f578a)',
     iconGradient: 'linear-gradient(135deg, rgba(54, 173, 163, 0.25), rgba(47, 87, 138, 0.25))',
     iconColor: '#36ADA3',
-    previewUrl: '#',
-    githubUrl: '#',
+    previewUrl: '/portfolio/stokbengkel',
     date: '2023-07-01',
   },
 ]
