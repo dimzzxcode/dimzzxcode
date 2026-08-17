@@ -1,38 +1,35 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import Services from './components/Services'
-import Experience from './components/Experience'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import BackToTop from './components/BackToTop'
-import { useReveal } from './hooks/useReveal'
-import { useActiveSection } from './hooks/useActiveSection'
+import { Suspense, lazy } from 'react'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop'
+import Home from './pages/Home'
+import { demoRegistry } from './portfolio/registry'
+
+const PortfolioHub = lazy(() => import('./portfolio/PortfolioHub'))
+
+function Fallback() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-navy-dark">
+      <div className="text-teal-400 text-sm font-700 uppercase tracking-widest animate-pulse">
+        Loading…
+      </div>
+    </div>
+  )
+}
 
 function App() {
-  const active = useActiveSection()
-  useReveal()
-
   return (
     <>
-      <Navbar active={active} />
-      <Hero />
-      <div className="section-divider" />
-      <About />
-      <div className="section-divider" />
-      <Services />
-      <div className="section-divider" />
-      <Experience />
-      <div className="section-divider" />
-      <Skills />
-      <div className="section-divider" />
-      <Projects />
-      <div className="section-divider" />
-      <Contact />
-      <Footer />
-      <BackToTop />
+      <ScrollToTop />
+      <Suspense fallback={<Fallback />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/portfolio" element={<PortfolioHub />} />
+          {demoRegistry.map((demo) => (
+            <Route key={demo.slug} path={demo.path} element={<demo.component />} />
+          ))}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </Suspense>
     </>
   )
 }

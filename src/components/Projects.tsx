@@ -1,4 +1,5 @@
 import { Wrench, Heart, Vote, Eye, FolderGit } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { projects } from '../data/projects'
 import { useLanguage } from '../i18n/useLanguage'
 
@@ -81,22 +82,24 @@ export default function Projects() {
 
                   {/* Action links */}
                   <div className="flex gap-3 mt-auto">
-                    <a
-                      href={project.previewUrl}
+                    <Link
+                      to={project.previewUrl}
                       className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-xs font-600 transition-all duration-200 hover:bg-teal-DEFAULT/20 hover:text-teal-DEFAULT text-slate-400 border border-white/10 hover:border-teal-DEFAULT/30"
                       aria-label={`${t.projects.preview} ${project.title[lang]}`}
                     >
                       <Eye size={13} aria-hidden="true" />
                       {t.projects.preview}
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-xs font-600 transition-all duration-200 hover:bg-white/10 hover:text-white text-slate-400 border border-white/10 hover:border-white/20"
-                      aria-label={`GitHub ${project.title[lang]}`}
-                    >
-                      <FolderGit size={13} aria-hidden="true" />
-                      GitHub
-                    </a>
+                    </Link>
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-xs font-600 transition-all duration-200 hover:bg-white/10 hover:text-white text-slate-400 border border-white/10 hover:border-white/20"
+                        aria-label={`GitHub ${project.title[lang]}`}
+                      >
+                        <FolderGit size={13} aria-hidden="true" />
+                        GitHub
+                      </a>
+                    )}
                   </div>
                 </div>
               </article>
