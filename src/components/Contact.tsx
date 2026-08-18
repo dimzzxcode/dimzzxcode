@@ -23,7 +23,7 @@ export default function Contact() {
       <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 lg:px-10">
         {/* Header */}
         <div className="text-center mb-16 reveal">
-          <p className="text-teal-DEFAULT text-sm font-700 uppercase tracking-widest mb-3">
+          <p className="text-teal-DEFAULT text-sm font-bold uppercase tracking-widest mb-3">
             {t.contact.label}
           </p>
           <h2 className="text-3xl sm:text-4xl font-black text-white accent-line-center">
@@ -34,23 +34,22 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid gap-8">
-          {/* Left: CTA card */}
-          <div className="reveal-left">
-            <div
-              className="glass rounded-2xl p-8 sm:p-10 h-full border border-white/5 relative overflow-hidden"
-              style={{
-                background:
-                  'linear-gradient(135deg, rgba(54, 173, 163, 0.08) 0%, rgba(35, 47, 114, 0.35) 50%)',
-              }}
-            >
-              <h3 className="text-white font-black text-2xl mb-8">
-                {t.contact.cardTitle} <span className="gradient-text">{t.contact.cardTitleWord}</span>
-              </h3>
+        {/* Left: CTA card */}
+        <div className="reveal-left">
+          <div
+            className="glass rounded-2xl p-8 sm:p-10 h-full border border-white/5 relative overflow-hidden"
+            style={{
+              background:
+                'linear-gradient(135deg, rgba(54, 173, 163, 0.08) 0%, rgba(35, 47, 114, 0.35) 50%)',
+            }}
+          >
+            <h3 className="text-white font-black text-2xl mb-8">
+              {t.contact.cardTitle} <span className="gradient-text">{t.contact.cardTitleWord}</span>
+            </h3>
 
-              {/* Contact items */}
-              <div className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {/* Contact items */}
+            <div className="space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <a
                   href="mailto:dimzzxcode@gmail.com"
                   className="flex items-center gap-3 p-3 rounded-xl transition-all duration-200 hover:bg-white/5 group min-w-0"
@@ -77,7 +76,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs text-slate-500 mb-0.5">{t.contact.items.email}</p>
-                    <p className="text-white text-sm font-600 group-hover:text-teal-DEFAULT transition-colors truncate">
+                    <p className="text-white text-sm font-semibold group-hover:text-teal-DEFAULT transition-colors truncate">
                       dimzzxcode@gmail.com
                     </p>
                   </div>
@@ -100,14 +99,14 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs text-slate-500 mb-0.5">{t.contact.items.whatsapp}</p>
-                    <p className="text-white text-sm font-600 group-hover:text-teal-DEFAULT transition-colors truncate">
+                    <p className="text-white text-sm font-semibold group-hover:text-teal-DEFAULT transition-colors truncate">
                       0813-2952-1887
                     </p>
                   </div>
                 </a>
-                </div>
+              </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <a
                   href="https://github.com/dimzzxcode"
                   target="_blank"
@@ -131,7 +130,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs text-slate-500 mb-0.5">{t.contact.items.github}</p>
-                    <p className="text-white text-sm font-600 group-hover:text-teal-DEFAULT transition-colors truncate">
+                    <p className="text-white text-sm font-semibold group-hover:text-teal-DEFAULT transition-colors truncate">
                       @dimzzxcode
                     </p>
                   </div>
@@ -160,7 +159,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs text-slate-500 mb-0.5">{t.contact.items.linkedin}</p>
-                    <p className="text-white text-sm font-600 group-hover:text-teal-DEFAULT transition-colors truncate">
+                    <p className="text-white text-sm font-semibold group-hover:text-teal-DEFAULT transition-colors truncate">
                       @dimascahyonuraditya
                     </p>
                   </div>
@@ -183,7 +182,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs text-slate-500 mb-0.5">{t.contact.items.instagram}</p>
-                    <p className="text-white text-sm font-600 group-hover:text-teal-DEFAULT transition-colors truncate">
+                    <p className="text-white text-sm font-semibold group-hover:text-teal-DEFAULT transition-colors truncate">
                       @dimzzxcode
                     </p>
                   </div>
@@ -206,7 +205,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs text-slate-500 mb-0.5">{t.contact.items.tiktok}</p>
-                    <p className="text-white text-sm font-600 group-hover:text-teal-DEFAULT transition-colors truncate">
+                    <p className="text-white text-sm font-semibold group-hover:text-teal-DEFAULT transition-colors truncate">
                       @dimzzxcode
                     </p>
                   </div>
@@ -229,7 +228,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs text-slate-500 mb-0.5">{t.contact.items.youtube}</p>
-                    <p className="text-white text-sm font-600 group-hover:text-teal-DEFAULT transition-colors truncate">
+                    <p className="text-white text-sm font-semibold group-hover:text-teal-DEFAULT transition-colors truncate">
                       @dimzzxcode
                     </p>
                   </div>
@@ -257,14 +256,13 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs text-slate-500 mb-0.5">{t.contact.items.location}</p>
-                    <p className="text-white text-sm font-600">Indonesia</p>
+                    <p className="text-white text-sm font-semibold">Indonesia</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
       </div>
     </section>
   )

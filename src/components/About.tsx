@@ -88,7 +88,7 @@ export default function About() {
 
           {/* Right: Text */}
           <div className="reveal-right order-1 lg:order-2">
-            <p className="text-teal-DEFAULT text-sm font-700 uppercase tracking-widest mb-3">
+            <p className="text-teal-DEFAULT text-sm font-bold uppercase tracking-widest mb-3">
               {t.about.label}
             </p>
             <h2 className="text-3xl sm:text-4xl font-black text-white leading-tight mb-2 accent-line">
@@ -100,46 +100,7 @@ export default function About() {
             <div className="space-y-4 mt-8 text-slate-300 leading-relaxed text-sm sm:text-base">
               <p>{t.about.p1}</p>
               <p>{t.about.p2}</p>
-              <p>
-                {t.about.p3.split('{{ai}}')[0]}
-                <span className="text-teal-DEFAULT font-medium">AI-Assisted Development</span>
-                {t.about.p3.split('{{ai}}')[1]}
-              </p>
-            </div>
-
-            {/* Mini skills */}
-            <div className="mt-8 flex flex-wrap gap-2">
-              <span className="tech-badge">Laravel</span>
-              <span className="tech-badge">React</span>
-              <span className="tech-badge">Expo React</span>
-              <span className="tech-badge">MySQL</span>
-              <span className="tech-badge">REST API</span>
-              <span className="tech-badge">Git & GitHub</span>
-
-              <span
-                className="tech-badge opacity-50 border-dashed border border-white/20 select-none"
-                title={t.about.comingSoon}
-              >
-                Golang ({t.about.comingSoon})
-              </span>
-              <span
-                className="tech-badge opacity-50 border-dashed border border-white/20 select-none"
-                title={t.about.comingSoon}
-              >
-                Next ({t.about.comingSoon})
-              </span>
-              <span
-                className="tech-badge opacity-50 border-dashed border border-white/20 select-none"
-                title={t.about.comingSoon}
-              >
-                Docker ({t.about.comingSoon})
-              </span>
-              <span
-                className="tech-badge opacity-50 border-dashed border border-white/20 select-none"
-                title={t.about.comingSoon}
-              >
-                CI/CD ({t.about.comingSoon})
-              </span>
+              <p>{t.about.p3}</p>
             </div>
 
             <div className="mt-8 flex flex-wrap gap-4">

@@ -1,5 +1,4 @@
-import { Wrench, Heart, Vote, Eye, FolderGit } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Wrench, Heart, Vote, BookOpen, School, Package } from 'lucide-react'
 import { projects } from '../data/projects'
 import { useLanguage } from '../i18n/useLanguage'
 
@@ -7,6 +6,9 @@ const ICON_MAP = {
   wrench: Wrench,
   heart: Heart,
   vote: Vote,
+  book: BookOpen,
+  school: School,
+  package: Package,
 } as const
 
 type IconKey = keyof typeof ICON_MAP
@@ -20,7 +22,7 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-10">
         {/* Header */}
         <div className="text-center mb-16 reveal">
-          <p className="text-teal-DEFAULT text-sm font-700 uppercase tracking-widest mb-3">
+          <p className="text-teal-DEFAULT text-sm font-bold uppercase tracking-widest mb-3">
             {t.projects.label}
           </p>
           <h2 className="text-3xl sm:text-4xl font-black text-white accent-line-center">
@@ -68,7 +70,7 @@ export default function Projects() {
                       className={
                         project.type === 'freelance'
                           ? 'inline-flex items-center font-semibold px-2.5 py-0.5 rounded-full uppercase tracking-wider text-[0.7rem] text-orange-400 bg-orange-500/10 border border-orange-500/20'
-                          : 'inline-flex items-center font-semibold px-2.5 py-0.5 rounded-full uppercase tracking-wider text-[0.7rem] text-cyan-400 bg-cyan-500/10 border border-cyan-500/20'
+                          : 'inline-flex items-center font-semibold px-2.5 py-0.5 rounded-full uppercase tracking-wider text-[0.7rem] text-red-400 bg-red-500/10 border border-red-500/20'
                       }
                     >
                       {t.projects.type[project.type]}
@@ -78,28 +80,6 @@ export default function Projects() {
                         {tech}
                       </span>
                     ))}
-                  </div>
-
-                  {/* Action links */}
-                  <div className="flex gap-3 mt-auto">
-                    <Link
-                      to={project.previewUrl}
-                      className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-xs font-600 transition-all duration-200 hover:bg-teal-DEFAULT/20 hover:text-teal-DEFAULT text-slate-400 border border-white/10 hover:border-teal-DEFAULT/30"
-                      aria-label={`${t.projects.preview} ${project.title[lang]}`}
-                    >
-                      <Eye size={13} aria-hidden="true" />
-                      {t.projects.preview}
-                    </Link>
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-xs font-600 transition-all duration-200 hover:bg-white/10 hover:text-white text-slate-400 border border-white/10 hover:border-white/20"
-                        aria-label={`GitHub ${project.title[lang]}`}
-                      >
-                        <FolderGit size={13} aria-hidden="true" />
-                        GitHub
-                      </a>
-                    )}
                   </div>
                 </div>
               </article>

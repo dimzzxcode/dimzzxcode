@@ -19,7 +19,7 @@ export const skills: SkillItem[] = [
     icon: 'openai',
     level: 'oftenUsed',
     levelColor: 'purple',
-    tag: 'Code Review & Debugging',
+    tag: 'Plan, Code & Debug',
   },
   {
     name: 'Laravel',
@@ -43,7 +43,7 @@ export const skills: SkillItem[] = [
     icon: 'tailwindcss',
     level: 'oftenUsed',
     levelColor: 'teal',
-    tag: 'Responsive Design',
+    tag: 'Utility-First',
   },
   {
     name: 'CodeIgniter',
@@ -66,7 +66,7 @@ export const skills: SkillItem[] = [
     subtitle: { id: 'Framework Frontend', en: 'Frontend Framework' },
     icon: 'vuejs',
     level: 'fairlyUsed',
-    levelColor: 'teal',
+    levelColor: 'sky',
     tag: 'SPA / Options API',
   },
   {
@@ -83,7 +83,7 @@ export const skills: SkillItem[] = [
     icon: 'mysql',
     level: 'oftenUsed',
     levelColor: 'teal',
-    tag: 'Query Optimization',
+    tag: 'Relational Database',
   },
   {
     name: 'REST API',
@@ -100,6 +100,22 @@ export const skills: SkillItem[] = [
     level: 'oftenUsed',
     levelColor: 'teal',
     tag: 'Collaboration',
+  },
+  {
+    name: 'Node JS',
+    subtitle: { id: 'Runtime Backend', en: 'Backend Runtime' },
+    icon: 'nodejs',
+    level: 'fairlyUsed',
+    levelColor: 'sky',
+    tag: 'Runtime Environment',
+  },
+  {
+    name: 'Express JS',
+    subtitle: { id: 'Framework Backend', en: 'Backend Framework' },
+    icon: 'expressjs',
+    level: 'fairlyUsed',
+    levelColor: 'sky',
+    tag: 'Routing & Middleware',
   },
   {
     name: 'Golang',

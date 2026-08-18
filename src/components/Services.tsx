@@ -9,44 +9,38 @@ export default function Services() {
       icon: Layout,
       title: t.services.cards.web.title,
       desc: t.services.cards.web.description,
-      badges: ['Laravel', 'React', 'Tailwind', 'Landing Page'],
-      coming: ['Golang', 'Next'],
+      badges: t.services.cards.web.badges,
     },
     {
       icon: BarChart3,
       title: t.services.cards.backend.title,
       desc: t.services.cards.backend.description,
-      badges: ['Laravel', 'PHP', 'MySQL'],
-      coming: ['Golang', 'PostgreSQL', 'MongoDB', 'Redis'],
-    },
-    {
-      icon: Layers,
-      title: t.services.cards.api.title,
-      desc: t.services.cards.api.description,
-      badges: ['REST API', 'JSON', 'Auth'],
-      coming: [],
-    },
-    {
-      icon: Activity,
-      title: t.services.cards.maintenance.title,
-      desc: t.services.cards.maintenance.description,
-      badges: ['Optimization', 'Debugging', 'Security'],
-      coming: [],
-    },
-    {
-      icon: Smartphone,
-      title: t.services.cards.mobile.title,
-      desc: t.services.cards.mobile.description,
-      badges: ['Expo React', 'Android'],
-      coming: ['iOS'],
+      badges: t.services.cards.backend.badges,
     },
     {
       icon: Sparkles,
       title: t.services.cards.ai.title,
       desc: t.services.cards.ai.description,
-      badges: ['AI Tools', 'Productivity', 'Automation'],
-      coming: [],
+      badges: t.services.cards.ai.badges,
       highlight: true,
+    },
+    {
+      icon: Smartphone,
+      title: t.services.cards.mobile.title,
+      desc: t.services.cards.mobile.description,
+      badges: t.services.cards.mobile.badges,
+    },
+    {
+      icon: Layers,
+      title: t.services.cards.api.title,
+      desc: t.services.cards.api.description,
+      badges: t.services.cards.api.badges,
+    },
+    {
+      icon: Activity,
+      title: t.services.cards.maintenance.title,
+      desc: t.services.cards.maintenance.description,
+      badges: t.services.cards.maintenance.badges,
     },
   ]
 
@@ -62,7 +56,7 @@ export default function Services() {
       <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-10">
         {/* Header */}
         <div className="text-center mb-16 reveal">
-          <p className="text-teal-DEFAULT text-sm font-700 uppercase tracking-widest mb-3">
+          <p className="text-teal-DEFAULT text-sm font-bold uppercase tracking-widest mb-3">
             {t.services.label}
           </p>
           <h2 className="text-3xl sm:text-4xl font-black text-white accent-line-center">
@@ -80,18 +74,9 @@ export default function Services() {
             return (
               <article
                 key={card.title}
-                className={`glass rounded-2xl p-7 card-hover reveal border border-white/5${card.highlight ? ' relative overflow-hidden' : ''}`}
+                className="glass rounded-2xl p-7 card-hover reveal border border-white/5"
                 style={{ transitionDelay: `${index * 0.05}s` }}
               >
-                {card.highlight && (
-                  <div
-                    className="absolute top-0 right-0 w-20 h-20 opacity-20 pointer-events-none"
-                    aria-hidden="true"
-                    style={{
-                      background: 'radial-gradient(circle at top right, #36ada3, transparent)',
-                    }}
-                  ></div>
-                )}
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
                   style={{
@@ -108,15 +93,6 @@ export default function Services() {
                   {card.badges.map((badge) => (
                     <span key={badge} className="tech-badge">
                       {badge}
-                    </span>
-                  ))}
-                  {card.coming.map((tech) => (
-                    <span
-                      key={tech}
-                      className="tech-badge opacity-50 border-dashed border border-white/20 select-none"
-                      title={t.services.comingSoon}
-                    >
-                      {tech} ({t.services.comingSoon})
                     </span>
                   ))}
                 </div>

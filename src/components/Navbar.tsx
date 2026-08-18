@@ -3,7 +3,7 @@ import { Mail, Menu, X, Languages } from 'lucide-react'
 import { useScrolled } from '../hooks/useScrolled'
 import { useLanguage } from '../i18n/useLanguage'
 
-const NAV_LINKS = ['about', 'services', 'experience', 'skills', 'projects', 'contact'] as const
+const NAV_LINKS = ['about', 'services', 'experience', 'projects', 'skills', 'contact'] as const
 
 interface NavbarProps {
   active: string
@@ -69,13 +69,15 @@ export default function Navbar({ active }: NavbarProps) {
             <Languages size={14} aria-hidden="true" />
             {lang === 'id' ? 'EN' : 'ID'}
           </button>
-          <a
-            href="#contact"
-            className="hidden sm:inline-flex btn-primary text-sm py-2.5 px-5"
-          >
-            <Mail size={15} aria-hidden="true" />
-            {t.nav.hireMe}
-          </a>
+          <div className="hidden md:block">
+            <a
+              href="#contact"
+              className="btn-primary text-sm py-2.5 px-5"
+            >
+              <Mail size={15} aria-hidden="true" />
+              {t.nav.hireMe}
+            </a>
+          </div>
           <button
             id="burger"
             className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
@@ -102,29 +104,21 @@ export default function Navbar({ active }: NavbarProps) {
                 <a
                   href={`#${id}`}
                   onClick={handleLinkClick}
-                  className="block py-2.5 px-3 rounded-lg text-sm font-500 text-slate-300 hover:bg-white/5 hover:text-teal-DEFAULT transition-colors"
+                  className="block py-2.5 px-3 rounded-lg text-sm font-medium text-slate-300 hover:bg-white/5 hover:text-teal-DEFAULT transition-colors"
                 >
                   {t.nav[id]}
                 </a>
               </li>
             ))}
           </ul>
-          <div className="mt-4 pt-4 border-t border-white/10 flex flex-col gap-3">
-            <button
-              type="button"
-              onClick={toggleLang}
-              className="inline-flex items-center justify-center gap-1.5 text-xs font-bold px-3 py-2 rounded-full border border-white/15 bg-white/5 text-slate-300 hover:text-teal-DEFAULT hover:border-teal-DEFAULT/40 transition-all"
-              aria-label={t.nav.toggleLabel}
-            >
-              <Languages size={14} aria-hidden="true" />
-              {lang === 'id' ? 'EN' : 'ID'}
-            </button>
+          <div className="mt-4 pt-4 border-t border-white/10">
             <a
               href="#contact"
               onClick={handleLinkClick}
               className="btn-primary w-full justify-center text-sm"
             >
-              {t.nav.contactMe}
+              <Mail size={15} aria-hidden="true" />
+              {t.nav.hireMe}
             </a>
           </div>
         </div>

@@ -1,23 +1,13 @@
 import { useEffect } from 'react'
-import { Mail, Monitor, ChevronDown } from 'lucide-react'
+import { Mail, ChevronDown } from 'lucide-react'
 import { useLanguage } from '../i18n/useLanguage'
 
 const TOKEN_STYLES: Record<string, string> = {
   sw: 'text-white font-semibold',
-  year: 'text-white font-semibold',
-  laravel: 'text-teal-DEFAULT font-medium',
-  react: 'text-teal-DEFAULT font-medium',
-  expo: 'text-teal-DEFAULT font-medium',
-  mysql: 'text-teal-DEFAULT font-medium',
 }
 
 const TOKEN_VALUES: Record<string, string> = {
   sw: 'Software Engineer',
-  year: '2022',
-  laravel: 'Laravel',
-  react: 'React',
-  expo: 'Expo React',
-  mysql: 'MySQL',
 }
 
 function renderParagraph(text: string) {
@@ -86,14 +76,18 @@ export default function Hero() {
           aria-hidden="true"
         >
           <div style={{ animation: 'float 7s ease-in-out infinite' }}>
-            <div className="text-slate-400">// dimzzxcode</div>
+            <div className="text-slate-400">// hello world</div>
             <div>
               <span className="text-blue-400">class</span>{' '}
               <span className="text-yellow-300">Developer</span> {'{'}
             </div>
             <div>
-              &nbsp;&nbsp;<span className="text-blue-300">name</span>:{' '}
+              &nbsp;&nbsp;<span className="text-blue-300">nickname</span>:{' '}
               <span className="text-green-300">'DimzzXCode'</span>,
+            </div>
+            <div>
+              &nbsp;&nbsp;<span className="text-blue-300">fullName</span>:{' '}
+              <span className="text-green-300">'Dimas Cahyo Nur Aditya'</span>,
             </div>
             <div>&nbsp;&nbsp;<span className="text-blue-300">stack</span>: [</div>
             {t.hero.codeBlock.stack.map((tech) => (
@@ -118,12 +112,19 @@ export default function Hero() {
           {t.hero.badge}
         </div>
 
+        <p
+          className="reveal text-2xl sm:text-3xl font-bold text-slate-300 mb-3"
+          style={{ transitionDelay: '0.05s' }}
+        >
+          {t.hero.greeting}
+        </p>
+
         <h1
           className="reveal text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black leading-none tracking-tighter mb-3"
           style={{ transitionDelay: '0.1s' }}
         >
-          <span className="text-white">Dimzz</span>
-          <span className="gradient-text">XCode</span>
+          <span className="text-white">{t.hero.namePrefix} </span>
+          <span className="gradient-text">Dimas</span>
         </h1>
 
         <div className="reveal flex flex-wrap gap-2 mb-6" style={{ transitionDelay: '0.2s' }}>
@@ -141,32 +142,24 @@ export default function Hero() {
           {renderParagraph(t.hero.paragraph)}
         </p>
 
-        <div className="reveal flex flex-wrap gap-4" style={{ transitionDelay: '0.4s' }}>
+        <div className="reveal flex flex-wrap items-center gap-x-8 gap-y-6" style={{ transitionDelay: '0.4s' }}>
           <a href="#contact" className="btn-primary">
             <Mail size={16} aria-hidden="true" />
             {t.hero.contactMe}
           </a>
-          <a href="#experience" className="btn-outline">
-            <Monitor size={16} aria-hidden="true" />
-            {t.hero.viewProjects}
-          </a>
-        </div>
-
-        <div
-          className="reveal mt-12 pt-8 border-t border-white/10 grid grid-cols-3 gap-6 max-w-sm sm:max-w-md"
-          style={{ transitionDelay: '0.5s' }}
-        >
-          <div>
-            <div className="text-3xl font-black gradient-text leading-none">4+</div>
-            <div className="text-xs text-slate-400 mt-1 font-500">{t.hero.stats.yearsExp}</div>
-          </div>
-          <div>
-            <div className="text-3xl font-black gradient-text leading-none">10+</div>
-            <div className="text-xs text-slate-400 mt-1 font-500">{t.hero.stats.projects}</div>
-          </div>
-          <div>
-            <div className="text-3xl font-black gradient-text leading-none">5+</div>
-            <div className="text-xs text-slate-400 mt-1 font-500">{t.hero.stats.techStack}</div>
+          <div className="grid grid-cols-3 gap-6 sm:border-l sm:border-white/10 sm:pl-8">
+            <div>
+              <div className="text-3xl font-black gradient-text leading-none">4+</div>
+              <div className="text-xs text-slate-400 mt-1 font-medium">{t.hero.stats.yearsExp}</div>
+            </div>
+            <div>
+              <div className="text-3xl font-black gradient-text leading-none">10+</div>
+              <div className="text-xs text-slate-400 mt-1 font-medium">{t.hero.stats.projects}</div>
+            </div>
+            <div>
+              <div className="text-3xl font-black gradient-text leading-none">5+</div>
+              <div className="text-xs text-slate-400 mt-1 font-medium">{t.hero.stats.techStack}</div>
+            </div>
           </div>
         </div>
       </div>

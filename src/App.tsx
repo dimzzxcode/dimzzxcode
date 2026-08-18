@@ -9,7 +9,7 @@ const PortfolioHub = lazy(() => import('./portfolio/PortfolioHub'))
 function Fallback() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-navy-dark">
-      <div className="text-teal-400 text-sm font-700 uppercase tracking-widest animate-pulse">
+      <div className="text-teal-400 text-sm font-bold uppercase tracking-widest animate-pulse">
         Loading…
       </div>
     </div>

@@ -26,9 +26,9 @@ function Home() {
       <div className="section-divider" />
       <Experience />
       <div className="section-divider" />
-      <Skills />
-      <div className="section-divider" />
       <Projects />
+      <div className="section-divider" />
+      <Skills />
       <div className="section-divider" />
       <Contact />
       <Footer />

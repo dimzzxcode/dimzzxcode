@@ -27,7 +27,7 @@ export default function Skills() {
       <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-10">
         {/* Header */}
         <div className="text-center mb-16 reveal">
-          <p className="text-teal-DEFAULT text-sm font-700 uppercase tracking-widest mb-3">
+          <p className="text-teal-DEFAULT text-sm font-bold uppercase tracking-widest mb-3">
             {t.skills.label}
           </p>
           <h2 className="text-3xl sm:text-4xl font-black text-white accent-line-center">
