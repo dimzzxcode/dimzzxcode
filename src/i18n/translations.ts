@@ -20,9 +20,9 @@ export const translations = {
     },
     hero: {
       greeting: 'Halo,',
-      namePrefix: 'saya',
+      namePrefix: 'Saya',
       badge: 'Terbuka untuk Kerja & Freelance',
-      badges: ['Software Engineer', 'Backend Developer', 'AI-Assisted Dev'],
+      badges: ['Software Engineer', 'Full Stack Developer', 'AI-Assisted Development'],
       paragraph:
         'Saya seorang {{sw}} yang mengubah masalah kompleks menjadi perangkat lunak yang sederhana dan andal dengan disiplin rekayasa. Saya memadukan prinsip rekayasa perangkat lunak yang kuat dengan pengembangan berbantuan AI untuk mendesain, membangun, menguji, dan meluncurkan produk digital yang praktis.',
       contactMe: 'Hubungi Saya',
@@ -166,7 +166,7 @@ export const translations = {
       greeting: 'Hi there,',
       namePrefix: "I'm",
       badge: 'Open to Work & Freelance',
-      badges: ['Software Engineer', 'Backend Developer', 'AI-Assisted Dev'],
+      badges: ['Software Engineer', 'Full Stack Developer', 'AI-Assisted Development'],
       paragraph:
         "I'm a {{sw}} who turns complex problems into simple, reliable software with engineering discipline. I combine strong software engineering principles with AI-assisted development to design, build, test, and ship practical digital products.",
       contactMe: 'Contact Me',

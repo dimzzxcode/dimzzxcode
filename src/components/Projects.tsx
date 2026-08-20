@@ -1,4 +1,4 @@
-import { Wrench, Heart, Vote, BookOpen, School, Package } from 'lucide-react'
+import { Wrench, Heart, Vote, BookOpen, School, Package, Car, Ticket } from 'lucide-react'
 import { projects } from '../data/projects'
 import { useLanguage } from '../i18n/useLanguage'
 
@@ -9,6 +9,8 @@ const ICON_MAP = {
   book: BookOpen,
   school: School,
   package: Package,
+  car: Car,
+  ticket: Ticket,
 } as const
 
 type IconKey = keyof typeof ICON_MAP

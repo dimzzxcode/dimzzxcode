@@ -16,6 +16,36 @@ export interface ProjectItem {
 
 export const projects: ProjectItem[] = [
   {
+    title: { id: 'Helpdesk Ticketing System', en: 'Helpdesk Ticketing System' },
+    description: {
+      id: 'Sistem helpdesk/ticketing full-stack untuk pelaporan dan penanganan masalah IT internal. Dilengkapi RBAC 3 peran, workflow status tiket, dashboard statistik real-time, dan audit trail, dibangun dengan clean architecture.',
+      en: 'A full-stack helpdesk/ticketing system for reporting and resolving internal IT issues. Features 3-role RBAC, ticket status workflow, real-time statistics dashboard, and audit trail, built with clean architecture.',
+    },
+    tech: ['Go', 'React', 'TypeScript', 'PostgreSQL', 'Redis', 'MinIO', 'Docker'],
+    icon: 'ticket',
+    type: 'personal',
+    gradient: 'linear-gradient(90deg, #3b82f6, #22d3ee)',
+    iconGradient: 'linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(34, 211, 238, 0.25))',
+    iconColor: '#3b82f6',
+    previewUrl: '/portfolio/helpdesk-ticketing-system',
+    date: '2026-07-01',
+  },
+  {
+    title: { id: 'Landing Page Wisata Kolam Renang & Rental Mobil', en: 'Swimming Pool & Car Rental Landing Page' },
+    description: {
+      id: 'Landing page untuk bisnis wisata kolam renang dan rental mobil, dirancang untuk konversi calon pelanggan dengan tampilan modern dan informasi layanan yang jelas.',
+      en: 'A landing page for a swimming pool tourism business and car rental service, designed to convert visitors with a modern look and clear service information.',
+    },
+    tech: ['React', 'Tailwind CSS'],
+    icon: 'car',
+    type: 'personal',
+    gradient: 'linear-gradient(90deg, #f97316, #eab308)',
+    iconGradient: 'linear-gradient(135deg, rgba(249, 115, 22, 0.25), rgba(234, 179, 8, 0.25))',
+    iconColor: '#f97316',
+    previewUrl: '/portfolio/kolam-rental-landing',
+    date: '2026-08-01',
+  },
+  {
     title: { id: 'Aplikasi Spiritual Care', en: 'Spiritual Care App' },
     description: {
       id: 'Aplikasi mobile untuk pendampingan spiritual dan kesehatan mental. Fitur jurnal harian, meditasi terpandu, dan tracking mood dengan antarmuka yang calming.',
