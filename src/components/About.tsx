@@ -1,4 +1,4 @@
-import { Terminal, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { useLanguage } from '../i18n/useLanguage'
 
 export default function About() {
@@ -52,16 +52,12 @@ export default function About() {
                         backgroundSize: '10px 10px',
                       }}
                     ></div>
-                    <Terminal
-                      size={88}
-                      color="#36ADA3"
-                      strokeWidth={2.2}
-                      className="relative"
-                      aria-hidden="true"
+                    <img
+                      src="/dimzz.jpg"
+                      alt="Dimas Cahyo Nur Aditya"
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover scale-125"
                     />
-                    <span className="relative text-white text-6xl font-black tracking-wider">
-                      DC
-                    </span>
                   </div>
                   <span className="absolute -bottom-3 right-2 z-10 text-base font-bold uppercase tracking-wider text-teal-400 bg-[#0b0d3a] border border-teal-500/40 rounded-lg px-3 py-1.5 shadow-lg shadow-black/40">
                     AI
